@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Pet Zoo</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="images/logo.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="container mx-auto">
+      <div class="navbar bg-base-100 items-center">
+        <div class="navbar-start">
+          <a class="btn btn-ghost text-xl font-bold"> <img src="images/logo.webp" alt="">The Pet Zoo</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>Shop</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <img class="w-7 h-7 " src="https://img.icons8.com/?size=50&id=7820&format=png" alt="">
+        </div>
+      </div>
+    </nav>
+    <!-- hero body  -->
+    <section class="py-6 ">
+      <!-- content of hero section  -->
+      <div class="text-center space-y-6">
+        <p class="text-[#94a3b8] text-xl">Bringing Families Together </p>
+        <h1 class="text-7xl font-extrabold">Your Path to Adoption <br> Starts Here</h1>
+        <p class="text-sm ">It is a long established fact that a reader will be distracted by the readable content of a
+          page when looking <br> at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        <button onclick="location.reload();" class="btn bg-[#0E7A81] text-white">View More</button>
+      </div>
+      <!-- img of hero section  -->
+      <div class="pt-10">
+        <img class="mx-auto" src="images/pet.webp" alt="">
+      </div>
+
+      <!-- text section  -->
+      <div class="text-center space-y-6">
+        <h2 class="font-bold text-3xl">Adopt Your Best Friend</h2>
+        <p class="text-sm ">It is a long established fact that a reader will be distracted by the readable content of a
+          <br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+      </div>
+    </section>
+  </header>
+
+  <main class="container mx-auto">
+    <nav id="selection-btn" class="py-3 md:flex md:justify-evenly gap-5">
+    </nav>
+    <section class="flex md:justify-between justify-evenly py-9">
+      <p class="text-xl font-bold">Best Deal For you</p>
+      <button class="btn bg-[#0E7A81] text-white">Sort by Price</button>
+    </section>
+
+    <!-- spinner section start -->
+    <span id="spinner" class="loader hidden text-center ">Loading</span>
+    <!-- spinner section end -->
+
+    <!-- all pet card show  -->
+    <section id="all-pets-category" class="md:flex ml-12 md:ml-2">
+      <div id="first-card" class="w-4/5 grid grid-cols-1 md:grid-cols-3 gap-5 py-10"></div>
+      <div class="w-1/5 py-1 border mx-2 my-4 rounded-lg ">
+        <div id="second-card" class=" grid grid-cols-1 md:grid-cols-2 gap-2 "></div>
+      </div>
+    </section>
+
+    <!-- modal section start -->
+
+    <button class="btn hidden" onclick="showModal.showModal()">open modal</button>
+    <dialog id="showModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal-container">
+        </div>
+        <div class="">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn w-full bg-[#0E7A811A] text-[#0E7A81]">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- modal section end  -->
+
+
+    <!-- countdown modal start -->
+
+
+    <!-- countdown modal end -->
+
+    <button class="btn hidden" onclick="count-down.showModal()">open modal</button>
+    <dialog id="count-down" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <img class="mx-auto" src="https://img.icons8.com/?size=48&id=PEmFcgjhBgKF&format=png" alt="">
+        <h2 class="text-3xl text-center font-bold">Congrates</h2>
+        <p class="py-4 text-center text-xl">Adoption process is start for your pet</p>
+        <center>
+          <p id="result" class="text-5xl font-extrabold"></p>
+        </center>
+      </div>
+    </dialog>
+    <!-- countdown modal end -->
+
+
+  </main>
+
+  <footer class="footer bg-black text-white p-10 justify-between">
+    <nav>
+      <a class="btn btn-ghost text-xl font-bold"> <img src="images/logo.webp" alt="">The Pet Zoo</a>
+      <a class="link link-hover">Location: av. Washington 165, NY CA </a>
+      <a class="link link-hover">54003</a>
+      <a class="link link-hover">Phone: +31 85 964 47 25</a>
+      <a class="link link-hover">Email: info@yourdomain.com</a>
+      <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+      <div class="flex">
+        <img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="">
+        <img src="https://img.icons8.com/?size=48&id=13963&format=png" alt="">
+        <img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="">
+        <img src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png" alt="">
+      </div>
+    </nav>
+    <nav>
+      <h6 class="font-bold text-xl">Company</h6>
+      <a class="link link-hover text-gray-400">Home</a>
+      <a class="link link-hover text-gray-400">About Us</a>
+      <a class="link link-hover text-gray-400">Animals</a>
+      <a class="link link-hover text-gray-400">Foundation</a>
+      <a class="link link-hover text-gray-400">Contact</a>
+    </nav>
+    <nav class="pt-10">
+      <h6 class="font-bold text-xl pb-3">Drop a Message</h6>
+      <input type="email" placeholder="Enter your Email"
+        class="py-3 px-8 bg-[#FFFFFF0D] border border-white rounded-lg ">
+      <button class="btn bg-[#0E7A81] py-4 px-20">Subscribe</button>
+    </nav>
+  </footer>
+  <script src="script/home.js"></script>
+</body>
+
+</html>
